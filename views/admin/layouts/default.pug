@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name="author" content="Trần Kim Quang")
+
+		script(src="https://cdn.tailwindcss.com/")
+		script(src="/tailwind.config.js")
+		title #{pageTitle}
+	
+	
+	body
+		div(class="flex h-screen relative") 
+			aside(class="flex bg-[#263238]")
+				ul(class="overflow-y-auto w-max text-[white] pr-[20px]")
+					li(class="border-b-[1px] border-b-[white] p-[10px] w-full ")
+						a(href=`/${admin}/main`) Tổng quan
+					li(class="border-b-[1px] border-b-[white] p-[10px]")
+						a(href=`/${admin}/product`) Sản phẩm
+					
+
+			main(class="overflow-y-auto h-full w-full fixed p-[10px]")
+				div(class="sticky top-0 bg-[#FA6B04] z-[50] overflow-y-none")
+					div(class="text-[white] font-bold text-[30px] px-[10px]") ADMIN 
+				block main
+
+	script(src="/admin/js/style.js") 
